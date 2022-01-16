@@ -1,0 +1,43 @@
+﻿<% const servicesCardData = [{
+    image: '/cdn/images/szolgaltatasaink/gep.jpg',
+    title: 'Egyedi gép és célgép',
+    altServices: ['Gyártása', 'Javítása', 'Kiépítése', 'Átalakítása']
+},{
+    image: '/cdn/images/szolgaltatasaink/elektropneumatikus.jpg',
+    title: 'Elektropneumatikus rendszerek, BUS rendszerek',
+    altServices: ['Kiépítése', 'Átalakítása']
+},{
+    image: '/cdn/images/szolgaltatasaink/hidraulikus.jpg',
+    title: 'Hidraulikus rendszerek',
+    altServices: ['Építése']
+},{
+    image: '/cdn/images/szolgaltatasaink/profil.jpg',
+    title: 'Alumínium profil rendszerek',
+    altServices: ['Építése (BOSCH, ITEM)']
+},] %>
+
+<trds-section id="szolgaltatasaink">
+    <h2 class="variant--1" style="margin-bottom: var(--space--m)">Szolgáltatásaink</h2>
+    <trds-grid class="boxes-layout">
+        <% servicesCardData.forEach(service => { %>
+            <trds-card>
+                <trds-card__media>
+                    <trds-image style="object-fit: cover;" src="<%= service.image %>" alt="<%= service.title %>"></trds-image>    
+                </trds-card__media>
+                <trds-card__body>
+                    <trds-stack>
+                        <h3 style="text-transform: uppercase;"><%= service.title %></h3>
+                        <trds-stack style="gap:var(--space--0)">
+                            <% service.altServices.forEach(alt => { %>
+                                <trds-grid class="auto-width-layout">
+                                    <trds-icon icon="solid/chevron-right"></trds-icon>
+                                    <span><%= alt %></span>
+                                </trds-grid>
+                            <% }); %>
+                        </trds-stack>
+                    </trds-stack>
+                </trds-card__body>
+            </trds-card>
+        <% }); %>
+    </trds-grid>
+</trds-section>

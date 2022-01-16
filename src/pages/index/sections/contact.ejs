@@ -1,0 +1,62 @@
+﻿<style>
+
+    .contact-block{
+        gap: var(--space--s);
+    }
+
+    .contact-block trds-icon{
+        flex-shrink: 0 !important;
+        color: var(--color--primary);
+    }
+
+    .contact-block__entry{
+        flex-wrap: nowrap;
+    }
+
+    .map{
+        width: 100%;
+        padding-bottom: 60%;
+        position: relative;
+    }
+
+    .map iframe{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+</style>
+
+<trds-section id="kapcsolat">
+    <trds-grid>
+        <trds-stack>
+            <h2 style="margin-bottom: var(--space--l);" class="variant--1">Kapcsolat</h2>
+            <trds-stack class="contact-block">
+                <a is="trds-link" class="block contact-block__entry" href="tel:+36 30 310 2441">
+                    <trds-grid class="auto-width-layout">
+                        <trds-icon lazy icon="solid/phone"></trds-icon>
+                        <span style="font-weight: bold;">+36 30 310 2441</span>
+                    </trds-grid>
+                </a>
+                <a is="trds-link" class="block contact-block__entry" href="mailto:locktursyskft@gmail.com">
+                    <trds-grid class="auto-width-layout">
+                        <trds-icon lazy icon="solid/envelope"></trds-icon>
+                        <span>locktursyskft@gmail.com</span>
+                    </trds-grid>
+                </a>
+                <trds-grid class="auto-width-layout contact-block__entry">
+                    <trds-icon lazy icon="solid/map-marker-alt"></trds-icon>
+                    <span>9011 Győr</span>
+                </trds-grid>
+            </trds-stack>
+        </trds-stack>
+        <div>
+            <h2 style="margin-bottom: var(--space--l);" class="variant--1">Szolgáltatási terület</h2>
+            <div class="map">
+                <iframe title="szolgáltatási terület" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1389063.6425128079!2d18.383948747856103!3d47.15756207552187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741837bdf37e4c3%3A0xc4290c1e1010!2sMagyarorsz%C3%A1g!5e0!3m2!1shu!2shu!4v1621430589745!5m2!1shu!2shu" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </trds-grid>
+</trds-section>

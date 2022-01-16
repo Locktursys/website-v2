@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <%- include('sections/head.ejs') %>
+    <link rel="stylesheet" href="/trds/dist/trds-critical.min.css">
+    <style>
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+    </style>
+    <script defer src="/trds/dist/trds.min.js"></script>
+</head>
+<body class="loading">
+
+    <script>
+        const disableLoader = () => document.body.classList.add('loading--disabled');
+    </script>
+    <div class="loader">
+        <video is="trds-video" src="/cdn/images/logo-animation.mp4" autoplay playsinline muted preload="auto" onended="disableLoader()"></video>
+    </div>
+
+    <%- include('sections/header.ejs') %>
+
+    <main>
+        <%- include(`pages/${page.name}/${page.name}.ejs`) %>
+    </main>
+
+    <%- include('sections/footer.ejs') %>
+    
+    <link rel="stylesheet" href="/trds/dist/trds.min.css">
+</body>
+</html>

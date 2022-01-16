@@ -1,0 +1,10 @@
+<trds-section id="munkaink">
+    <h2 class="variant--1" style="margin-bottom: var(--space--m)">Munkáink</h2>
+    <trds-grid class="boxes-layout">
+        <% for(i=1; i<=19; i++) { %>
+            <a target="_blank" is="trds-link" style="background-color: var(--color--secondary-bg); max-width: var(--element--max-width);" class="block" href="/cdn/images/works/<%= i %>.jpg">
+                <trds-image lazy alt="munkánk" src="/cdn/images/works/<%= i %>.jpg"></trds-image>
+            </a>
+        <% } %>
+    </trds-grid>
+</trds-section>

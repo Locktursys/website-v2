@@ -1,0 +1,11 @@
+﻿[{
+    "name": "index",
+    "title": "Egyedi gép és célgép gyártás",
+    "description": "Vállalkozásunk a megrendelő igényeit figyelembe véve (tervezéstől-átadásig), a legkülönbözőbb (pneumatikus, hidraulikus, villamos, elektronikus) szakemberekkel működik együtt.",
+    "url": "/"
+},{
+    "name": "404",
+    "title": "Az oldal nem található",
+    "description": "404-es hiba.",
+    "url": "*"
+}]
